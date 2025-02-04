@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Backend end</title>
+</head>
+     <body>
+        <header></header>
+            
+            <br>
+            <center><b><h1>Backend Developer</h1></b></center>
+            <br>
+            <center><b><h1> Django </h1></b></center>
+            <br>
+            
+            <nav>
+                 <a href="#Server">Server</a><br><br>
+                 <a href="#Database">Database<a><br><br> 
+                 <a href="#programminglanguage">Programming languaage</a><br><br>      
+                 <a href="#API">API</a><br><br>
+                <main>
+                    <article>
+                    <a href id="#server"></a>
+                     <h3>server</h3>
+                       <p>0
+                        Jump to Comments
+                        
+                        2
+                        Save
+                        
+                        Boost
+                        
+                        Cover image for Backend Development Basics: Servers, Databases, and APIs
+                        Rowsan Ali
+                        Rowsan Ali
+                        Posted on Oct 19, 2023
+                        
+                        
+                        8
+                        Backend Development Basics: Servers, Databases, and APIs
+                        #
+                        webdev
+                        #
+                        javascript
+                        #
+                        beginners
+                        #
+                        programming
+                        Backend development is a critical part of building web and mobile applications. It involves creating and managing the server, databases, and APIs that power the application. In this blog post, we'll explore the fundamentals of backend development, including servers, databases, and APIs, and provide code examples to help you get started.
+                        
+                        What is Backend Development?
+                        Backend development refers to the server-side of web and mobile applications. It involves handling requests from clients (such as web browsers or mobile apps), processing data, and sending responses back to the client. Backend developers work with servers, databases, and APIs to ensure that the application functions smoothly.
+                        
+                        Servers
+                        A server is a computer or software that listens for incoming requests and responds to them. In the context of web development, a server is responsible for handling HTTP requests. Common server-side programming languages and frameworks include Node.js, Python (with Flask or Django), Ruby on Rails, and Java (with Spring).
+                        
+                        Creating a Simple Node.js Server
+                        Here's a basic example of setting up a Node.js server using the Express.js framework:
+                        
+                        const express = require('express');
+                        const app = express();
+                        const port = 3000;
+                        
+                        app.get('/', (req, res) => {
+                          res.send('Hello, World!');
+                        });
+                        
+                        app.listen(port, () => {
+                          console.log(`Server is running on port ${port}`);
+                        });
+                        In this code, we create a server that listens on port 3000 and responds with "Hello, World!" when you visit the root URL.
+                        
+                        Databases
+                        Databases are used to store and manage application data. They can be relational (e.g., MySQL, PostgreSQL) or NoSQL (e.g., MongoDB, Redis). Backend developers work with databases to store, retrieve, and manipulate data based on application requirements.
+                        
+                        Connecting to a Database in Node.js
+                        Let's connect to a MongoDB database using the Mongoose library in Node.js:
+                        
+                        const mongoose = require('mongoose');
+                        
+                        mongoose.connect('mongodb://localhost/myapp', { useNewUrlParser: true, useUnifiedTopology: true });
+                        
+                        const db = mongoose.connection;
+                        
+                        db.on('error', console.error.bind(console, 'Connection error:'));
+                        db.once('open', () => {
+                          console.log('Connected to the database');
+                        });
+                        This code connects to a MongoDB database running locally. Once connected, you can define data models and perform CRUD (Create, Read, Update, Delete) operations.
+                        
+                        APIs (Application Programming Interfaces)
+                        APIs are a way for different parts of a software application to communicate with each other. In the context of web development, APIs are used to enable communication between the client-side (front end) and server-side (back end) of an application. APIs can be RESTful, GraphQL, or based on other protocols.
+                        
+                        Creating a RESTful API in Node.js
+                        Using Express.js, you can easily create a RESTful API. Here's a simple example that exposes endpoints for retrieving and creating tasks:
+                        
+                        const express = require('express');
+                        const app = express();
+                        const port = 3000;
+                        
+                        app.use(express.json());
+                        
+                        const tasks = [];
+                        
+                        app.get('/tasks', (req, res) => {
+                          res.json(tasks);
+                        });
+                        
+                        app.post('/tasks', (req, res) => {
+                          const newTask = req.body;
+                          tasks.push(newTask);
+                          res.status(201).json(newTask);
+                        });
+                        
+                        app.listen(port, () => {
+                          console.log(`API server is running on port ${port}`);
+                        });
+                        In this code, we define two endpoints: one for getting a list of tasks and another for creating a new task. The API communicates using JSON data.
+                        
+                        Conclusion
+                        Backend development is essential for building robust and feature-rich web and mobile applications. It involves creating servers to handle requests, working with databases to store and retrieve data, and building APIs to enable communication between the client and server. As you delve deeper into backend development, you'll discover more advanced concepts and tools to enhance the functionality and performance of your applications. Remember that this is just the beginning of your backend development journey, and there's a lot more to explore. Happy coding!
+                        
+                        Top comments (0)
+                        Subscribe
+                        pic
+                        Add to the discussion
+                        Code of Conduct • Report abuse
+                        profile
+                        Pieces.app
+                        Promoted
+                        
+                        A Workflow Copilot. Tailored to You.
+                        Pieces.app image
+                        
+                        Our desktop app, with its intelligent copilot, streamlines coding by generating snippets, extracting code from screenshots, and accelerating problem-solving.
+                        
+                        Read the docs
+                        
+                        Read next
+                        garciadiazjaime profile image
+                        React 19: New hook useActionState
+                        Jaime - Dec 16 '24
+                        
+                        holygrimm profile image
+                        How My Old Laptop Taught Me More About Coding Than Any Course Ever Could
+                        Abhay - Dec 16 '24
+                        
+                        madza profile image
+                        8 Modern Developer Tools that Will 10X Your Productivity 🔥🚀
+                        Madza - Jan 6
+                        
+                        getvm profile image
+                        Algorithmic Horizons: Mastering Computational Problem-Solving
+                        GetVM - Dec 16 '24
+                        
+                        
+                        Rowsan Ali
+                        Follow
+                        Sharing information | Along side learning.
+                        Location
+                        India
+                        Pronouns
+                        He / Him
+                        Joined
+                        Oct 15, 2023
+                        More from Rowsan Ali
+                        A 50+ pages reactjs PDF cheat sheet with code examples of 30+ topics
+                        #webdev #javascript #react #programming
+                        How to Create Smooth Card Groups in CSS
+                        #webdev #javascript #beginners #tutorial
+                        A Comprehensive Guide to Assessing Landing Page Effectiveness
+                        #webdev #tutorial #news #learning
+                        profile
+                        Heroku
+                        Promoted
+                        
+                        Heroku
+                        
+                        Simplify your DevOps and maximize your time.
+                        Since 2007, Heroku has been the go-to platform for developers as it monitors uptime, performance, and infrastructure concerns, allowing you to focus on writing code.
+                        
+                        Learn More
+                        
+                        Thank you to our Diamond Sponsor Neon for supporting our community.
+                        
+                        DEV Community — A constructive and inclusive social network for software developers. With you every step of your journey.
+                        
+                        Home
+                        DEV++
+                        Podcasts
+                        Videos
+                        Tags
+                        DEV Help
+                        Forem Shop
+                        Advertise on DEV
+                        DEV Challenges
+                        DEV Showcase
+                        About
+                        Contact
+                        Free Postgres Database
+                        Software comparisons
+                        Code of Conduct
+                        Privacy Policy
+                        Terms of use
+                        Built on Forem — the open source software that powers DEV and other inclusive communities.
+                        
+                        Made
+ 
+             </p>
+    
+        <article>
+
+        </article>
+               <h3>Database</h3>
+               <button><a href id="Database"></a></button>
+               <p> Couchbase Website
+                Products
+                
+                
+                
+                Solutions
+                Developers
+                
+                Resources
+                Company
+                
+                
+                PricingTry FreeSign Insearch
+                Blog
+                Browse by Topic
+                Browse by Specialization
+                Search here...
+                Blog Sign In >
+                A Guide to Backend Databases
+                
+                Couchbase Product Marketing
+                September 7, 2023
+                The backend is the part of an application responsible for storing and processing data. It’s the opposite of the front end, the part of the application that users interact with. The backend typically comprises servers, application programming interfaces (APIs), and databases. 
+                
+                A backend database stores and manages data for the backend of an application. Backend databases come in various types, each with its strengths and weaknesses. Your choice of backend database will depend on the application’s specific needs. For example, a relational database would be a good choice if the application needs to store a lot of structured data. A NoSQL database would be a better choice if the application needs to store a lot of unstructured data.
+                
+                In addition to further exploring how the backend and backend databases work, this article will cover the different types of backend architectures, advise you on choosing the right database for your application, and discuss the most popular backend languages and tools. 
+                
+                What is a Backend?
+                The backend is a critical component of the software architecture that handles data processing and business logic, ensuring an application’s overall functionality and performance while keeping data secure and providing a foundation for the front-end user interface to interact with.
+                
+                Key components and responsibilities of the backend include:
+                
+                Data Management: The backend manages the storage and retrieval of data from databases or other data sources. It ensures data consistency, integrity, and security.
+                Business Logic: Backend code contains the application’s business logic, which defines how data is processed and what actions to take in response to user requests or system events.
+                Server-side Processing: The backend handles server-side operations such as authentication, authorization, and validation of user inputs. Server-side processing is critical for ensuring the security and integrity of the application.
+                APIs (Application Programming Interfaces): The backend often exposes APIs that allow communication between the front-end and backend components of the application. These APIs define the endpoints through which you exchange data.
+                Performance and Scalability: Backend developers are responsible for optimizing the application’s performance and scalability to handle large numbers of users and data efficiently.
+                Integration: The backend may need to integrate with external services, third-party APIs, or other systems to provide additional functionality or access external data.
+                Security: Backend developers implement security measures to protect data and prevent unauthorized access or attacks on the application.
+                Database Management: Backend systems interact with databases to store, update, and retrieve data. Management includes designing the database schema and writing queries to manipulate data.
+                What is a Backend Architecture?
+                A backend architecture is the way the backend components of an application are organized and interconnected. A well-designed backend architecture is essential for building scalable, reliable, and maintainable software applications.
+                
+                Key components in backend architecture include the following:
+                
+                Server: The physical or virtual machine runs the backend software. It handles incoming client requests, processes them, and sends back responses. Servers can be single machines or part of a distributed system.
+                Application Server: In some architectures, an application server executes application-specific code and manages application-level services. Examples include Java EE application servers like Apache Tomcat or frameworks like Ruby on Rails.
+                Database: Backend systems typically interact with one or more databases to store, retrieve, and manipulate data. The choice of database technology (SQL or NoSQL) and schema design are crucial to the backend architecture.
+                APIs (Application Programming Interfaces): Backend architectures often include APIs that define how the front end and external services can communicate with the backend. These APIs can be RESTful APIs, GraphQL, SOAP, or other protocols.
+                Middleware: Middleware components can be included in the backend architecture to provide infrastructure services such as authentication, authorization, caching, and load balancing. They sit between the application server and the database, facilitating communication and enhancing performance.
+                It’s also relevant to mention that there are many different types of backend architectures, each with advantages and disadvantages. Some common backend architectures include:
+                
+                Monolithic Architecture: You tightly couple the backend components in a monolithic architecture. A monolithic architecture makes it easy to develop and deploy the application but can be challenging to scale and maintain.
+                Microservices Architecture: You loosely couple the backend components in a microservices architecture. A microservices architecture makes scaling and maintaining the application easier, but developing and deploying can be more complex.
+                Event-driven Architecture: In an event-driven architecture, the backend components communicate by sending and receiving events. An event-driven architecture makes it easier to decouple the components and scale the application.
+                The choice of backend architecture depends on the application’s specific requirements, including its scale, performance, security, and the development team’s expertise. Modern applications often employ a combination of technologies and architectural patterns to meet their needs effectively.
+                
+                What is a Backend Database?
+                A backend database is a database that stores and manages data for the backend of an application. Backend databases, for example, come in many types, each with its strengths and weaknesses. Some common types of backend databases include:
+                
+                Relational Databases (RDBMS): Relational databases are the most common type of database. They store data in tables related to each other by foreign keys. Relational databases are suitable for storing structured data, such as customer records or product orders. Examples of relational databases include MySQL, PostgreSQL, and Microsoft SQL Server.
+                
+                NoSQL Databases: NoSQL databases store unstructured or semi-structured data. They don’t have the same strict data modeling requirements as relational databases, which makes them more flexible. NoSQL databases are suitable for storing social media posts or sensor data.
+                
+                Different types of NoSQL databases include:
+                
+                Document Databases: Store data in JSON or BSON-like documents. Examples include Couchbase and MongoDB.
+                Key-Value Stores: Store data as key-value pairs. Examples include Amazon DynamoDB.
+                Your choice of backend database will depend on the application’s specific needs. For example, a relational database would be a good choice if the application needs to store primarily structured data. A NoSQL database would be a better choice if the application needs to store primarily unstructured data.
+                
+                Backend Languages and Tools
+                Databases for Backend development involves creating the server-side logic and infrastructure of a software application. Backend languages and tools are essential for building the functionality that supports the front end, manages databases, handles authentication, and performs various server-side tasks. Here are some popular backend languages and tools used in web and software development:
+                
+                Backend Programming Languages
+                JavaScript: Although primarily known as a front-end language, you can use JavaScript on the backend with Node.js, a runtime environment. Node.js allows developers to build server-side applications using JavaScript, making it a versatile choice for full-stack development.
+                
+                Python: Widely used for backend development, Python is useful due to its readability and extensive libraries. Popular Python frameworks for building web applications include Django and Flask.
+                
+                Java: Java has been a long-standing choice for enterprise-level backend development. Java frameworks like Spring and Java EE provide robust solutions for building scalable and secure applications.
+                
+                PHP: Historically, PHP has been a popular choice for web development, particularly server-side scripting. You can use it with web frameworks like Laravel and Symfony.
+                
+                Backend Frameworks and Tools
+                Express.js: A minimalist Node.js web application framework for building APIs and web applications.
+                
+                Django: A high-level Python framework that follows the Model-View-Controller (MVC) architectural pattern.
+                
+                Ruby on Rails: A Ruby framework that emphasizes convention over configuration (CoC) and the don’t repeat yourself (DRY) principle.
+                
+                Spring Boot: An extension of the Java Spring framework that simplifies building production-ready applications.
+                
+                ASP.NET: A framework for building web applications and services in C# on the Microsoft .NET platform.
+                
+                Laravel: A PHP web application framework known for its elegant syntax and features like Eloquent ORM and Blade templating.
+                
+                Flask: A lightweight Python microframework that provides essential components for building web applications.
+                
+                Why You Need a Backend Database
+                Without a backend database, an application wouldn’t be able to store, manage, or protect data. To learn more about why these functions are critical to the development of your application, keep reading. 
+                
+                Data Storage: Backend databases provide a central location for storing data. They make it easy to access and manage the data and make it more secure.
+                Data Consistency: Backend databases ensure data consistency across all users and applications. Date consistency is critical for e-commerce and financial applications due to their dependency on accurate data. 
+                Data Scalability: Backend databases can be scaled to meet the application’s needs. Having a scalable database means you can add or remove resources without affecting the application’s performance.
+                Data security: Backend databases can be secured to protect data from unauthorized access. This protection is important for applications that handle sensitive data, such as healthcare or financial applications.
+                Now that you’ve learned about the importance of the backend and backend databases and explored popular backend architectures, languages, and tools, you should check out these resources and blog posts to keep learning more. 
+                
+                The Top 8 Best Languages for Backend Development
+                Capella App Services (BaaS)
+                Couchbase for Backend Developers
+                Couchbase Capella for Mobile Developers
+                Mobile Developers: Is REST Keeping You Up At Night?
+                NoSQL Databases
+                Posted in: Application Design, Best Practices and Tutorials, Couchbase SDK, Couchbase Server Tagged in: Architecture, Backend Development, SQL for JSON
+                Author
+                
+                Posted by Couchbase Product Marketing
+                 All Posts
+                 
+                Leave a reply
+                You must be logged in to post a comment.
+                
+                Login with your Social ID
+                
+                
+                 
+                Recent Posts
+                Synthetic Data Generation with Capella DataStudio
+                Graph Time Series Data From the Comfort of Your Terminal
+                Mobile App Development Process (Life Cycle, Costs, Platforms)
+                Enjoying KubeCon North America 2024
+                Introducing Couchbase as a Vector Store in MindsDB
+                Top Posts
+                Data Modeling Explained: Conceptual, Physical, Logical
+                What Is Data Analysis? Types, Methods, and Tools for Research
+                App Development Costs (A Breakdown)
+                Application Development Life Cycle (Phases and Management Models)
+                Data Analysis Methods: Qualitative vs. Quantitative Techniques
+                Blog Topics
+                
+                Select Topic
+                Stay informed about Couchbase Blogs
+                Email *
+                
+                By checking this box, you acknowledge our Privacy Policy. You may unsubscribe at any time.
+                This field is required.
+                Couchbase
+                Documentation
+                Downloads
+                Forums
+                Blog
+                Resources
+                Support Login
+                Training
+                Careers
+                Events
+                SDKs
+                Twitter
+                LinkedIn
+                Github
+                StackOverflow
+                © 2025 Couchbase, Inc. Couchbase and the Couchbase logo are registered trademarks of Couchbase, Inc. All third party trademarks (including logos and icons) referenced by Couchbase, Inc. remain the property of their respective owners.
+                Terms of Use
+                 
+                Privacy Policy
+                 
+                Cookie Policy
+                 
+                Support Policy
+                 
+                Marketing Preference Center
+                
+
+                             </p>
+             <article>
+
+             </article>
+
+                      <h3>Programminglanguage</h3>
+                      <button><a href id="programminglanguage"></a></button>
+                              <p>
+                                WsCube Tech Blog
+                                Home
+                                Offline
+                                Jodhpur Center
+                                CMS & Web Technologies
+                                Full Stack Web Development Course
+                                WordPress Course
+                                PHP Course
+                                JavaScript Course
+                                Bootstrap Course
+                                Laravel Course
+                                NodeJS Course
+                                AngularJS Course
+                                ReactJS Course
+                                Mern Stack Course
+                                Programming
+                                Python Course
+                                Java Course
+                                C Programming Course
+                                C++ Programming Course
+                                Digital Marketing
+                                SEO Course
+                                Digital Marketing Course
+                                Content Writing Course
+                                Google Ads Course
+                                App Development
+                                Android App Development Course
+                                Flutter App Development Course
+                                Professional Training
+                                Data Science Course
+                                Graphic Designing Course
+                                Data Analyst Course
+                                Cybersecurity
+                                Ethical Hacking Course
+                                Penetration Testing Course
+                                Jaipur Center
+                                CMS & Web Technologies
+                                Web Development Course
+                                MERN Stack Course
+                                Web Designing Course
+                                Laravel Training
+                                ReactJs Training
+                                PHP Training
+                                AngularJs Training
+                                NodeJs Training
+                                Javascript Training
+                                HTML Training
+                                WordPress Training
+                                Programming
+                                Python Course
+                                Java Course
+                                C Programming Course
+                                C++ Programming Course
+                                Digital Marketing
+                                SEO Course
+                                Digital Marketing Course
+                                Social Media Course
+                                Google Ads Course
+                                Professional Training
+                                Data Analyst Course
+                                Graphic Designing Course
+                                Cybersecurity
+                                Penetration Testing Course
+                                Ethical Hacking Course
+                                Live Online
+                                Web Development
+                                Full Stack Web Development Course
+                                WordPress Course
+                                Professional Training
+                                Data Science Course
+                                Data Analyst Course
+                                Python Course
+                                Graphic Design Course
+                                App Development
+                                Android App Development Course
+                                Flutter App Development Course
+                                Cyber Security
+                                Ethical Hacking Course
+                                Penetration Testing Course
+                                Digital Marketing
+                                SEO Course
+                                Digital Marketing Course
+                                Content Writing Course
+                                Performance Marketing Course
+                                YouTube Course
+                                Self-Paced
+                                Free Resources
+                                Interview Questions
+                                HTML
+                                PHP
+                                CSS
+                                JAVASCRIPT
+                                MYSQL
+                                C
+                                SEO
+                                ReactJS
+                                Python
+                                Email Marketing
+                                Content Writing
+                                Django
+                                Digital Marketing
+                                Flutter
+                                Java
+                                DBMS
+                                Angular
+                                NodeJs
+                                Free Quizzes
+                                HTML
+                                PHP
+                                CSS
+                                JAVASCRIPT
+                                MYSQL
+                                C
+                                SEO
+                                HTML5
+                                CSS3
+                                Android
+                                JQUERY
+                                CPP
+                                Machine Learning
+                                ReactJS
+                                Ethical Hacking
+                                Python
+                                Java
+                                Cyber Security
+                                Data Science
+                                SQL
+                                Internship
+                                BCA Internship
+                                MCA Internship
+                                Bsc Internship
+                                Msc Internship
+                                B.Tech. Internship
+                                Polytechnic Internship
+                                Summer Training
+                                More
+                                About Us
+                                Blog
+                                10+ Best Backend Programming Languages (2025 List)
+                                Web Development
+                                10+ Best Backend Programming Languages (2025 List)
+                                10+ Best Backend Programming Languages (2025 List)
+                                Most of our tasks today are done on computers or other smart devices. We all use one or the other kind of social media app. And every time you click on a link or scroll through your reels, it displays the relevant information on your screen. But have you ever been curious about how all this happens?
+                                
+                                All of this, and the excellent user experience, are possible due to the backend of apps. There are backend languages that make the user experience of any application seamless and are responsible for the development of such sturdy backends.
+                                
+                                Web development generally comprises front-end and back-end development. Front-end languages like HTML, CSS, and JavaScript serve the client side and what’s on a screen, while back-end development supports the server side or the functionality of the website or app. Learning about back-end languages makes you become a more complete development professional.
+                                
+                                You are certainly in the right place if you want to know more about the most popular backend programming languages and their applications. We will discuss almost everything related to the backend and backend languages here.
+                                
+                                Table of Contents
+                                What is Backend Development?
+                                What Are Backend Programming Languages?
+                                Types of Backend Languages
+                                Best Backend Languages (2025 List)
+                                FAQs Related to Backend Languages
+                                What is Backend Development?
+                                Backend development is an important aspect of web development that focuses on creating and maintaining the server-side components of a website or web application. It’s the part of the development process that handles the “behind-the-scenes” functionality, data management, and the server’s interaction with the client-side (front-end) of a website.
+                                
+                                Backend developers manage the server where the website or web application is hosted. This includes setting up and configuring the server, ensuring its security, and optimizing its performance.
+                                
+                                Backend developers design and maintain the database systems that store and manage the website’s data. This involves creating database schemas, optimizing database queries, and ensuring data integrity.
+                                
+                                The developers also write code to handle server-side logic, which includes processing user requests, authentication, authorization, and business logic. They determine how data is retrieved and presented to the user.
+                                
+                                
+                                What Are Backend Programming Languages?
+                                Developers use backend programming languages to program the internal systems operating in any web application’s background.
+                                
+                                The software’s backend is a part not visible to the user. Top backend programming languages have specific features that ease communicating with the server, through which program users give and receive information and data.
+                                
+                                If you are a backend developer or want to work as a backend developer, you might use these architectural programming languages and frameworks for different projects, like:
+                                
+                                ● Websites
+                                
+                                ● Interactive online tools
+                                
+                                ● Mobile apps
+                                
+                                ● Desktop apps
+                                
+                                ● Web servers
+                                
+                                ● Software prototypes
+                                
+                                ● Online games
+                                
+                                ● Security features
+                                
+                                ● Data collection
+                                
+                                ● Networking
+                                
+                                Also read: Front End Languages for Web Development in 2025
+                                
+                                Types of Backend Languages
+                                Types of Backend Programming Languages
+                                Usually, backend programming languages are categorized into two major types:
+                                
+                                1. Object-Oriented Programming
+                                This approach emphasizes object or data formations instead of using logic. Here, the object is a data field in functional programming with uncommon characteristics.
+                                
+                                Object-oriented programming is best when developers work in teams on big and complex projects. PHP, Java, Ruby, and Python are the common examples of OOP backend programming.
+                                
+                                2. Functional Programming
+                                FP back-end programming focuses more on declarations and results than the programming procedure. It backs parallel, immutable data and doesn’t have any side effects. 
+                                
+                                To improve productivity & modularity and sort out scripting issues in the most straightforward ways, FP is the best option. SQL, R, Haskell, and F# are the best FP backend programming languages. 
+                                
+                                Best Backend Languages (2025 List)
+                                Best Backend Programming Languages
+                                </p>
+                            <arctile>
+                               <h3>API</h3>
+                                <button><a href id="API"></a></button>
+                                       <p>0
+                                        Jump to Comments
+                                        
+                                        18
+                                        Save
+                                        
+                                        Boost
+                                        
+                                        Cover image for Back-end API development introduction
+                                        Cesare Ferrari
+                                        Cesare Ferrari
+                                        Posted on Jan 8, 2020
+                                        
+                                        
+                                        19
+                                        
+                                        3
+                                        Back-end API development introduction
+                                        #
+                                        node
+                                        #
+                                        express
+                                        #
+                                        backend
+                                        #
+                                        javascript
+                                        What back-end means in the context of web application development
+                                        A large part of application development for the web has to do with what is called back-end.
+                                        
+                                        What is the back-end?
+                                        We can think of back-end as applications that communicate with one another. In web development, back-end is a service that sends data to the front-end.
+                                        
+                                        When we create a front-end application, we create an interface for the user to interact with. That interface is made of components like buttons, dropdown menus, pages, fonts, etc.
+                                        
+                                        The back-end also has an interface, but this interface is not used (or consumed) by the end user. It's used by other applications.
+                                        
+                                        Back-end applications often include databases but they don't have to. They are any kind of service (data, computation, actions, activities, events) that need to occur in support of other applications needs.
+                                        
+                                        API
+                                        API is an acronym that means: Application Programming Interface.
+                                        It's the interface that is used by an application, typically a front-end application, to talk to the back-end application.
+                                        
+                                        API are methods and functions that wrap some operations.
+                                        We normally talk about APIs in the context of internet network applications, but API is a more generic term that describe interfaces between any kind of applications.
+                                        For example, an application like Axios has an API that it uses to communicate with other applications.
+                                        
+                                        Sometimes API are synchronous, meaning that we have to wait for their response to our requests before we can continue our operation. Other times APIs are asynchronous, which means that their responses can come at a later time so we can continue with our work while waiting for the response.
+                                        Some API never reply back. In this case it's our responsibility to check with them periodically to see if a request has succeeded or not.
+                                        
+                                        REST APIs
+                                        One common type of API we have these days is called REST API.
+                                        REST stands for Representational State Transfer.
+                                        
+                                        These are APIs that are meant to leverage the infrastructure of the internet by using the HTTP protocol.
+                                        HTTP (Hypertext transfer protocol) is the protocol used on the internet, and by using REST APIs we gain all the benefits of that infrastructure that's already built and tested on a large scale.
+                                        
+                                        The HTTP protocol specifies that any request made by an HTTP client includes a verb in that same request. The verb indicates to the server what kind of action we ask the server to perform.
+                                        
+                                        There are several HTTP verbs, but the four most common ones are GET, POST, PUT, and DELETE.
+                                        
+                                        In the HTTP request we also provide other information, along with these verbs, that tells the server what it's supposed to do.
+                                        
+                                        The GET verb will tell the server "Get something and return it to me"
+                                        POST says: "I'm giving you information, I want you to save it"
+                                        PUT does a similar thing as POST, but it's used to update existing information.
+                                        The DELETE verb tells the server "I want you to remove something".
+                                        
+                                        Typically these kinds of exchanges happen within the context of a browser / web server interaction, but working with back-end application we create HTTP servers that are not web servers and we use HTTP clients that are not browsers.
+                                        
+                                        CRUD
+                                        APIs very often have to deal with data and there are four basic functions that we can perform with data:
+                                        
+                                        Create data
+                                        Read data
+                                        Update, or change, data
+                                        Delete data
+                                        Those four functions are represented in an acronym called CRUD.
+                                        
+                                        Each of those four functions has a correlation with an HTTP verb:
+                                        
+                                        Create -> POST
+                                        Read -> GET
+                                        Update -> PUT
+                                        Delete -> DELETE
+                                        There are a myriad of applications that are used to develop and run back-end services, let's take a very quick look at the two main ones we are going to use.
+                                        
+                                        Node.js
+                                        Node.js is basically Javascript outside of the browser.
+                                        
+                                        Inside a web browser, the ability to run Javascript is performed by a system called Javascript engine.
+                                        It turns out that the team that created the Javascript engine and the teams that created the browsers are not the same team.
+                                        The creators of the Javascript engine made it available to the browser teams, but they created it in such a way that that same engine can be embedded and used in other type of applications.
+                                        The Node.js creators took advantage of the Javascript engine and created a server out of it so we can now execute Javascript on the back-end without having to do it inside the browser.
+                                        
+                                        Express
+                                        Express is a Node.js application used to make HTTP requests.
+                                        It's possible to use other libraries, but Express makes it very easy to create and send HTTP requests with Node.
+                                        
+                                        We will see how to create and use back-end applications with Node.js and Express in the following articles.
+                                        
+                                        I write daily about web development. If you like this article, feel free to share it with your friends and colleagues.
+                                        
+                                        You can receive articles like this in your inbox by subscribing to my newsletter.
+                                        
+                                        Top comments (0)
+                                        Subscribe
+                                        pic
+                                        Add to the discussion
+                                        Code of Conduct • Report abuse
+                                        profile
+                                        Bright Data
+                                        Promoted
+                                        
+                                        Image of Bright Data
+                                        
+                                        Ensure Data Quality Across Sources – Manage and normalize data effortlessly.
+                                        Maintain high-quality, consistent data across multiple sources with our efficient data management tools.
+                                        
+                                        Manage Data
+                                        
+                                        Read next
+                                        tqbit profile image
+                                        Mastering Efficient Queue Structures in TypeScript: A Complete Guide
+                                        tq-bit - Jan 9
+                                        
+                                        dpc profile image
+                                        Daily JavaScript Challenge #JS-79: Find the Majority Element in an Array
+                                        DPC - Jan 21
+                                        
+                                        pengeszikra profile image
+                                        Javascript great again! - The Voice of Void
+                                        Peter Vivo - Jan 18
+                                        
+                                        codingnninja profile image
+                                        Why I won't use querySelector again.
+                                        Ayobami Ogundiran - Jan 14
+                                        
+                                        
+                                        Cesare Ferrari
+                                        Follow
+                                        I write daily about front-end and back-end web development.
+                                        Location
+                                        Du Bois, PA
+                                        Education
+                                        Full Stack Web Development @ Lambda School
+                                        Work
+                                        Web application developer at Mary & Ferrari
+                                        Joined
+                                        Dec 5, 2017
+                                        More from Cesare Ferrari
+                                        How to create an API endpoint query with Knex
+                                        #knex #backend
+                                        Creating a User model file in a REST API
+                                        #knex #rest #backend
+                                        How to create a join query with Knex
+                                        #knex #backend
+                                        profile
+                                        Heroku
+                                        Promoted
+                                        
+                                        Heroku
+                                        
+                                        Simplify your DevOps and maximize your time.
+                                        Since 2007, Heroku has been the go-to platform for developers as it monitors uptime, performance, and infrastructure concerns, allowing you to focus on writing code.
+                                        
+                                        Learn More
+                                        
+                                        DEV Community — A constructive and inclusive social network for software developers. With you every step of your journey.
+                                        
+                                        Home
+                                        Tags
+                                        About
+                                        Contact
+                                        Code of Conduct
+                                        Privacy Policy
+                                        Terms of use
+                                        Built on Forem — the open source software that powers DEV and other inclusive communities.
+                                        
+                                        Made with love and Ruby on Rails. DEV Community © 2016 - 2025.
+                                     </p>
+                       </arctile>
+                       <footer>
+                        <a hrf="#">contact</a>Contact
+                        <a hrf="#"></a>helps us</a></h4>
+                       </footer>
+                </article>
+            </main>
+        </body>
+    </head>
+</html>
